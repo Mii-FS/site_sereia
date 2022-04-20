@@ -957,6 +957,7 @@
   
   
   <script>
+    
     let quantidadeRolagemFim = 0;
     window.onscroll = function() {
       if ((window.innerHeight + Math.ceil(window.pageYOffset)) >= document.body.offsetHeight) {
@@ -971,6 +972,41 @@
     }
     
   </script>
+  
+  
+  
+  <script>
+           
+  let quantidadeLogado = 0;
+window.addEventListener(
+     'load', evt => {
+         setTimeout(
+         function() {
+         quantidadeLogado++;
+           
+           console.log("um minuto");
+         tracker.send('event',
+           {
+              'action': 'timeout',
+              'label': '1 min',
+              'category': 'Tempo no site',
+              'value': quantidadeLogado,
+              'cd1': ' 1 minuto navegando'
+         }
+         )
+       }, 60000
+     )
+    }
+ )
+
+  
+  
+  
+  
+  
+  
+  
+  
 
   
   <img src="https://tag-trainer.raccoon.ag/static/shared/balloon.svg" id="call-me-baby" />
