@@ -1003,6 +1003,30 @@ window.addEventListener(
   
   
   
+  <script>        
+      // verificar quantos interagiram com menu-->
+
+let quantidadeMenu = 0;
+let onclick = set menu;
+    
+window.onclick = function('button.navbar-toggle').addEventListener() {
+  'click', evt => {
+   
+    if (click) {
+
+      quantidadeMenu += 1;
+    window.tracker.send('event',
+        {'action': 'onclick',
+        'label': 'contato com o menu',
+        'category': 'menu',
+        'value': quantidadeMenu,
+        'cd1': 'preencher uma mensagem'});
+      clicado = false;
+
+    }
+  })
+  
+  
   
   
   
