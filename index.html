@@ -1014,7 +1014,7 @@ window.addEventListener(
   let Menu = 0;
   let click = true;    
       
-  window.onclick = function() {
+menu.onclick = function() {
     
   document.querySelector('nav#mainNav.navbar.navbar-default.navbar-custom.navbar-fixed-top.affix div.container').addEventListener(
   'click', evt => {
@@ -1022,7 +1022,7 @@ window.addEventListener(
     if (click) {
 
       quantidadeMenu += 1;
-      tracker.send('event', 
+     WINDOW.tracker.send('event', 
                    
         {'action': 'onclick', 
         'label': 'contato com o menu',
