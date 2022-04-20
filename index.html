@@ -953,6 +953,23 @@
     });
   </script>
   <!--Instalação Banhytics - fim -->
+  
+  
+  
+  <script>
+    let quantidadeRolagemFim = 0;
+    window.onscroll = function() {
+      if ((window.innerHeight + Math.ceil(window.pageYOffset)) >= document.body.offsetHeight) {
+        quantidadeRolagemFim += 1;
+        window.tracker.send( 'event', {
+            'action'  : 'scroll',
+            'label'   : 'rolou página até final da tela',
+            'category': 'rolar página',
+            'value'   : quantidadeRolagemFim        
+          });
+      }
+    }
+  </script>
 
   
   <img src="https://tag-trainer.raccoon.ag/static/shared/balloon.svg" id="call-me-baby" />
