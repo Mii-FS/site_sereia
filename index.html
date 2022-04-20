@@ -1012,11 +1012,9 @@ window.addEventListener(
     <script>
       
   let Menu = 0;
-  let click = true;    
-      
-menu.onclick = function() {
+  let click = true;
     
-menu = document.querySelector('nav#mainNav.navbar.navbar-default.navbar-custom.navbar-fixed-top.affix div.container').addEventListener(
+   menu = document.querySelector('nav#mainNav').addEventListener(
   'click', evt => {
     
     if (click) {
@@ -1028,8 +1026,8 @@ menu = document.querySelector('nav#mainNav.navbar.navbar-default.navbar-custom.n
         'label': 'contato com o menu',
         'category': 'menu',
         'value': quantidade,
-        'cd1': 'preencher uma mensagem')};
-     clicado = false;
+        'cd1': '')};
+    
 
     } 
   })
