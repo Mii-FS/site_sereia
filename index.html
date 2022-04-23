@@ -2711,8 +2711,9 @@ let botao1 = document.querySelector('#page-top > footer > div > div > div:nth-ch
     });
   });
     
-     let botao4 = document.querySelector( 'fa fa-twitter#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(1) > a > i')
-   botao1.addEventListener('onclick', () => {
+     let botao4 = document.querySelector( 'fa.fa-twitter#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(1) > a > i')
+     botao4.addEventListener('onclick', () => {
+     
        tracker.send('event', {
       'action': 'click-social-buttons',
       'label': 'Sereia',
@@ -2720,8 +2721,30 @@ let botao1 = document.querySelector('#page-top > footer > div > div > div:nth-ch
       'value':'twiter'
     });
   });
+   
+    
+       let botao5 = document.querySelector( 'fa.fa-facebook > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(1) > a > i')
+     botao5.addEventListener('onclick', () => {
      
+       tracker.send('event', {
+      'action': 'click-social-buttons',
+      'label': 'Sereia',
+      'category': 'social-buttons',
+      'value':'facebook'
+    });
+  });
      
+    
+       let botao6 = document.querySelector( 'fa.fa-linkedin > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(1) > a > i')
+     botao6.addEventListener('onclick', () => {
+     
+       tracker.send('event', {
+      'action': 'click-social-buttons',
+      'label': 'Sereia',
+      'category': 'social-buttons',
+      'value':'linkedin'
+    });
+  });
      
      
      
