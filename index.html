@@ -1064,7 +1064,7 @@ window.addEventListener(
   
   
   
-  <script>
+ <script>
 
   //  envio do formulário de contato
   const name = document.getElementById('name');
@@ -1073,7 +1073,7 @@ window.addEventListener(
   const message = document.getElementById('message');
 
   document.querySelector('form-group error#help-block text-danger').addEventListener('submit', e => {
-    if (name.value === '' && email.value === '' && phone.value === '' && message.value === '') {
+    if (name.value === '' || email.value === '' || phone.value === '' || message.value === '') {
       window.tracker.send('e', {
         'action': 'submit-form',
         'label': 'envio',
