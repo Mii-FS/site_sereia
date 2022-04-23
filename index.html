@@ -1072,37 +1072,27 @@ window.addEventListener(
   const phone = document.getElementById('phone');
   const message = document.getElementById('message');
 
-  document.querySelector('form-group error#help-block text-danger').addEventListener(
-    'submit', e => {
-      if (name.value === '' && email.value === '' && phone.value === '' && message.value === '') {
-        window.tracker.send(
-          'e',
-            {
-              'action': 'submit-form',
-              'label': 'envio',
-              'category': 'form',
-              'value': 'submit-fail'
-            }
-        );
-      }
+  document.querySelector('form-group error#help-block text-danger').addEventListener('submit', e => {
+    if (name.value === '' && email.value === '' && phone.value === '' && message.value === '') {
+      window.tracker.send('e', {
+        'action': 'submit-form',
+        'label': 'envio',
+        'category': 'form',
+        'value': 'submit-fail'
+      });
     }
-  );
+  });
 
-  document.querySelector('alert.alert-success').addEventListener(
-    'submit', e => {
-      if (name.value !== '' && email.value !== '' && phone.value !== "" && message.value !== '') {
-        window.tracker.send(
-          'e',
-            {
-              'action': 'submit-form',
-              'label': 'envio',
-              'category': 'form',
-              'value': 'submit-sucess'
-            }
-        );
-      }
+  document.querySelector('alert.alert-success').addEventListener('submit', e => {
+    if (name.value !== '' && email.value !== '' && phone.value !== "" && message.value !== '') {
+      window.tracker.send('e', {
+        'action': 'submit-form',
+        'label': 'envio',
+        'category': 'form',
+        'value': 'submit-sucess'
+      });
     }
-  );
+  });
 
 </script>
 
