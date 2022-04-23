@@ -1018,7 +1018,7 @@ window.addEventListener(
   'click', evt => {
     
     
-    if (click) {
+    if (clicado) {
 
       quantidadeMenu += 1;
       tracker.send('event', 
@@ -1027,8 +1027,9 @@ window.addEventListener(
         'label': 'contato com o menu',
         'category': 'menu',
         'value': quantidade,
-        'cd1': '')};
-    
+        'cd1': ''});
+     clicado = false;
+
 
     } 
   })
