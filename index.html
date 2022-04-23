@@ -1094,22 +1094,21 @@ let click = true;
      </script> 
 
 
-     <script> 
-   //  envio do formulário de contato
-  let name = document.getElementById('name').value;
-  let email = document.getElementById('email').value;
-  let phone = document.getElementById('phone').value;
-  let message = document.getElementById('message').value;
+   <script>
 
- let contactForm = document.querySelector('form#contactForm');
-  
-  console.log('content: ' + name + ' ' + email + ' ' + phone + ' ' + message);
+  // Envio do formulário de contato
+  let name = document.getElementById('name');
+  let email = document.getElementById('email');
+  let phone = document.getElementById('phone');
+  let message = document.getElementById('message');
 
-  contactForm.addEventListener('submit', e => {
+  let contactForm = document.querySelector('form#contactForm');
+
+  contactForm.addEventListener("submit", e => {
 
     e.preventDefault();
 
-    if (name === '' || email === '' || phone === '' || message === '') {
+    if (name.value === '' || email.value === '' || phone.value === '' || message.value === '') {
 
       window.tracker.send('e', {
         'action': 'submit-form',
@@ -1126,13 +1125,15 @@ let click = true;
         'category': 'form',
         'value': 'submit-sucess'
       });
+
+      contactForm.submit();
     }
 
   });
 
-   
-      </script> 
-  
+  contactForm.submit();
+
+</script>
   
   
   
