@@ -1013,7 +1013,7 @@ window.addEventListener(
   let  quantidadeMenu = 0;
   let clicado = true;
     
-  document.querySelector('nav#mainNav.navbar.navbar-default.navbar-custom.navbar-fixed-top.affix div.container').addEventListener(
+  document.querySelector('nav#mainNav.navbar.navbar-default.navbar-custom.navbar-fixed-top.affix.div.container').addEventListener(
   'click', evt => {
     
     
@@ -1035,12 +1035,13 @@ window.addEventListener(
      
  
     </script>
+ 
   
-
+  
   
      <script>
   
-       const botoes = document.querySelectorAll('navbar-collapse collaps');
+       const botoes = document.querySelector('navbar-collapse collaps');
        document.onclick = function(elemento){ 
          for(let menu of botoes){
            
@@ -1054,14 +1055,41 @@ window.addEventListener(
         'value': '',
         'cd1': ''});
     
-
         })
 
     })
-     
-
        
       </script>
+  
+  
+  
+    <script>
+const botao = document.querySelector('button','navbar-header page-scroll'));
+
+function random(number) {
+  menu +=1;
+}
+
+botao.addEventListener('click','event' => {
+       
+          tracker.send('event',
+                       
+        {'action': 'onclick', 
+        'label': 'contato com o menu',
+        'category': 'menu',
+        'value': '',
+        'cd1': ''});
+          
+    </script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
 
