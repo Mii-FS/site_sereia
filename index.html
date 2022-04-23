@@ -1005,27 +1005,7 @@ window.addEventListener(
    </script> 
   
   
- <script> 
-let quantidadeMenu = 0;
 
-  document.querySelector('#bs-example-navbar-collapse-1 > ul').addEventListener('click', e => {
-
-    quantidadeMenu += 1;
-
-    tracker.send('event', {
-      'action': 'click', 
-      'label': 'contato com o menu',
-      'category': 'menu',
-      'value': quantidade,
-      'cd1': 'preencher uma mensagem'
-    });
-  });
-
-     
- </script> 
-  
-  
-  
   
    
   
@@ -2762,7 +2742,30 @@ let botao1 = document.querySelector('#page-top > footer > div > div > div:nth-ch
           disparoFormContact = false;
         );
       }
-    
+        
+   </script> 
+  
+     <script> 
+let quantidadeMenu = 0;
+
+  document.querySelector('#bs-example-navbar-collapse-1 > ul').addEventListener('click', e => {
+
+    quantidadeMenu += 1;
+
+    tracker.send('event', {
+      'action': 'click', 
+      'label': 'contato com o menu',
+      'category': 'menu',
+      'value': quantidade,
+      'cd1': 'preencher uma mensagem'
+    });
+  });
+
+     
+ </script> 
+  
+  
+  
 
 </body>
 
