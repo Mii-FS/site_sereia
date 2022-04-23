@@ -1007,22 +1007,19 @@ window.addEventListener(
   
  <script> 
 let quantidadeMenu = 0;
-let click = true;
 
-  document.querySelector('nav#mainNav.navbar.navbar-default.navbar-custom.navbar-fixed-top.affix div.container').addEventListener(
-  'click', evt => {
-    
-    if (click) {
+  document.querySelector('#bs-example-navbar-collapse-1 > ul').addEventListener('click', e => {
 
-      quantidadeMenu += 1;
-      tracker.send('event', 
-        {'action': 'click', 
-        'label': 'contato com o menu',
-        'category': 'menu',
-        'value': quantidade,
-        'cd1': 'preencher uma mensagem' });
-      clicado = false;
-  } 
+    quantidadeMenu += 1;
+
+    tracker.send('event', {
+      'action': 'click', 
+      'label': 'contato com o menu',
+      'category': 'menu',
+      'value': quantidade,
+      'cd1': 'preencher uma mensagem'
+    });
+  });
 
      
  </script> 
