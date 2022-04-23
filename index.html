@@ -2748,7 +2748,7 @@ let click = true;
       const y = window.pageYOffset;
       console.log(scrollIni, y);
       if (disparoFormContact === true){
-        if (Math.ceil(y) > Math.ceil(scrollIni * 0.90 )) {
+      if (Math.ceil(y) > Math.ceil(scrollIni * 0.90 )) {
           quantidadeForm++;
           
           tracker.send(
@@ -2759,13 +2759,12 @@ let click = true;
               'category': 'visualizar-form-contato',
               'value': quantidadeForm,
               'cd1': 'Source Code'
-            }
-          );
+            
           quantidadeForm++;
           disparoFormContact = false;
-        }
+        );
       }
-    }
+    
 
 </body>
 
