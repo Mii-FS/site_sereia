@@ -1066,18 +1066,21 @@ window.addEventListener(
   
   
   <script>  
-<!--verificar quantas pessoas enviaram o formulário de contato e se foi com sucesso ou falha-->
+//  envio do formulário de contato 
+    
+    
+    
     const name = document.getElementById('name');
     const email = document.getElementById('email');
     const phone = document.getElementById('phone');
     const message = document.getElementById('message');
 
-    document.querySelector('form#contactForm').addEventListener(
-      'submit', evt => {
+    document.querySelector('form-group error#help-block text-danger').addEventListener(
+      'submit', e => {
 
         if (name.value === '' && email.value === '' && phone.value === '' && message.value === '') {
           window.tracker.send(
-            'event',
+            'e',
             {
               'action': 'submit-form',
               'label': 'envio',
@@ -1087,9 +1090,11 @@ window.addEventListener(
           );
         }
       
+        document.querySelector('alert.alert-success').addEventListener(
+      'submit', e => {
         if (name.value !== '' && email.value !== '' && phone.value !== "" && message.value !== '') {
           window.tracker.send(
-            'event',
+            'e',
             {
               'action': 'submit-form',
               'label': 'envio',
