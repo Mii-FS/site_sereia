@@ -966,7 +966,7 @@
     window.onscroll = function() {
       if ((window.innerHeight + Math.ceil(window.pageYOffset)) >= document.body.offsetHeight) {
         quantidadeRolagemFim += 1;
-        window.tracker.send( 'event', {
+        window.tracker.send( 'e', {
             'action'  : 'scroll',
             'label'   : 'rolou página até final da tela',
             'category': 'rolar página',
@@ -988,7 +988,7 @@ window.addEventListener(
          function() {
          quantidadeLogado++;
            
-         tracker.send('event',
+         tracker.send('e',
            {
               'action': 'timeout',
               'label': '1 min',
@@ -1025,11 +1025,84 @@ window.addEventListener(
    </script> 
   
   
+     <script> 
+       //
+       //"list-inline social-buttons"
+       
+        Let botao1  = document.querySelector('#fa.fa-twiter')
+        Let botao2  = document.querySelector('#fa.fa-facebook')
+        Let botao3  = document.querySelector('#fa.fa-linkedin')
+       
+       Let botao4  = document.querySelector('#fa.fa-linkedin')
+       Let botao5  = document.querySelector('#fa.fa-linkedin')
+       
+       Let botao5  = document.querySelector('#fa.fa-linkedin')
+       
+       
+       
+       
+       
+  botao1.addEventListener('mouseover'),
+    function ( ) {
+     if (clicado  
+    
+  })
+  tracker.send('event', 
+        {'action': 'click-social-buttons', 
+        'label': 'site',
+        'category': 'social-buttons',
+        'value':'twiter',
+  
+          }
+     }
+          
+  
+     </script> 
+
+
   
   
   
   
   
+  <script>  
+<!--verificar quantas pessoas enviaram o formulário de contato e se foi com sucesso ou falha-->
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
+    const message = document.getElementById('message');
+
+    document.querySelector('form#contactForm').addEventListener(
+      'submit', evt => {
+
+        if (name.value === '' && email.value === '' && phone.value === '' && message.value === '') {
+          window.tracker.send(
+            'event',
+            {
+              'action': 'submit-form',
+              'label': 'envio',
+              'category': 'form',
+              'value': 'submit-fail'
+            }
+          );
+        }
+      
+        if (name.value !== '' && email.value !== '' && phone.value !== "" && message.value !== '') {
+          window.tracker.send(
+            'event',
+            {
+              'action': 'submit-form',
+              'label': 'envio',
+              'category': 'form',
+              'value': 'submit-sucess'
+            }
+          );
+        }
+      }
+    )
+
+</script>
+
   
   
   
