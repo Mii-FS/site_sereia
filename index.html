@@ -1048,24 +1048,18 @@ let click = true;
        
        
        
-  botao1.addEventListener('mouseover'),
-    function ( ) {
-     if (clicado)  
-    
-  })
-  tracker.send('event', 
-        {'action': 'click-social-buttons', 
-        'label': 'site',
-        'category': 'social-buttons',
-        'value':'twiter',
-  
-          }
-     }
-          
-  
-     </script> 
+ botao1.addEventListener('click'), () => {
 
+    tracker.send('event', {
+      'action': 'click-social-buttons',
+      'label': 'site',
+      'category': 'social-buttons',
+      'value':'twiter'
+    }
+  }
+                 
 
+ </script> 
   
   
   
