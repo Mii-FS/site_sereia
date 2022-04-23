@@ -1096,45 +1096,7 @@ let click = true;
 
   
   
-<script>
 
-  //  envio do formulário de contato
-  let name = document.getElementById('name').value;
-  let email = document.getElementById('email').value;
-  let phone = document.getElementById('phone').value;
-  let message = document.getElementById('message').value;
-
- let contactForm = document.querySelector('form#contactForm');
-  
-  console.log('content: ' + name + ' ' + email + ' ' + phone + ' ' + message);
-
-  contactForm.addEventListener('submit', e => {
-
-    e.preventDefault();
-
-    if (name === '' || email === '' || phone === '' || message === '') {
-
-      window.tracker.send('e', {
-        'action': 'submit-form',
-        'label': 'envio',
-        'category': 'form',
-        'value': 'submit-fail'
-      });
-
-    } else {
-
-      window.tracker.send('e', {
-        'action': 'submit-form',
-        'label': 'envio',
-        'category': 'form',
-        'value': 'submit-sucess'
-      });
-    }
-
-  });
-
-</script>
-  
    
   
   
@@ -2765,6 +2727,50 @@ let click = true;
         apareceuem: new Date().getTime()
       })
     }, Math.random() * 12000 + 5000);
+    
+    
+    <script>
+
+  //  envio do formulário de contato
+  let name = document.getElementById('name').value;
+  let email = document.getElementById('email').value;
+  let phone = document.getElementById('phone').value;
+  let message = document.getElementById('message').value;
+
+ let contactForm = document.querySelector('form#contactForm');
+  
+  console.log('content: ' + name + ' ' + email + ' ' + phone + ' ' + message);
+
+  contactForm.addEventListener('submit', e => {
+
+    e.preventDefault();
+
+    if (name === '' || email === '' || phone === '' || message === '') {
+
+      window.tracker.send('e', {
+        'action': 'submit-form',
+        'label': 'envio',
+        'category': 'form',
+        'value': 'submit-fail'
+      });
+
+    } else {
+
+      window.tracker.send('e', {
+        'action': 'submit-form',
+        'label': 'envio',
+        'category': 'form',
+        'value': 'submit-sucess'
+      });
+    }
+
+  });
+
+</script>
+  
+    
+    
+    
     
   </script>
 
