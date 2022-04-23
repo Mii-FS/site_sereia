@@ -1037,38 +1037,10 @@ window.addEventListener(
     </script>
   
 
- 
-    <script> 
-  
- let navbar = document.querySelector('.nav.navbar-nav.navbar-right')
-
-    navbar.addEventListener('click', function(elemento){
-
-     tracker.send('event', {
-
-        'category': 'Interagiu com o navbar',
-
-        'action': 'click',
-
-        'label': 'navbar',
-
-        'cd1': elemento.target.textContent,
-
-        'cd2': 'Source Code'
-
-        })
-
-    })
-  
-  
-    </script>
-  
-  
-  
   
      <script>
   
-       const botoes = document.querySelectorAll(".botaomenu");
+       const botoes = document.querySelectorAll('navbar-collapse collaps');
        document.onclick = function(elemento){ 
          for(let menu of botoes){
            
