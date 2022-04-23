@@ -1040,37 +1040,7 @@ window.addEventListener(
 
   
   
-  <script>
 
-  let quantidadeForm = 0;
-  let disparoFormContact = true;
-
-  document.addEventListener(
-    'scroll', evt => {
-      const scrollIni = (document.documentElement.scrollHeight - window.innerHeight) * 0.999;
-      const y = window.pageYOffset;
-      console.log(scrollIni, y);
-      if (disparoFormContact === true){
-        if (Math.ceil(y) > Math.ceil(scrollIni * 0.90 )) {
-          quantidadeForm++;
-          tracker.send(
-            'event',
-            {
-              'action': 'view', 
-              'label': 'Formulário',
-              'category': 'form',
-              'value': 'Formulario de contato',
-              'cd1': 'direcionar para o formulario de contato'
-            }
-          );
-          quantidadeForm++;
-          disparoFormContact = false;
-        }
-      }
-    }
-  )
-  
-  </script>
   
   
   
