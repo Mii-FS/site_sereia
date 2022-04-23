@@ -2710,7 +2710,21 @@ let botao1 = document.querySelector('#page-top > footer > div > div > div:nth-ch
       'value':'linkedin'
     });
   });
-   
+    
+     let botao4 = document.querySelector( 'fa fa-twitter#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(1) > a > i')
+   botao1.addEventListener('onclick', () => {
+       tracker.send('event', {
+      'action': 'click-social-buttons',
+      'label': 'Sereia',
+      'category': 'social-buttons',
+      'value':'twiter'
+    });
+  });
+     
+     
+     
+     
+     
   </script>
   
   
