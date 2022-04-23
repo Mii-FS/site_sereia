@@ -2700,8 +2700,8 @@ let click = true;
  </script>
   
   <script> 
-  let botao1 = document.querySelector('#page-top > footer > div > div > div:nth-child(2) > ul > li:nth-child(1) > a > i');
-  botao1.addEventListener('click'), () => {
+let botao1 = document.querySelector('#page-top > footer > div > div > div:nth-child(2) > ul > li:nth-child(1) > a > i');
+  botao1.addEventListener('click', () => {
 
     tracker.send('event', {
       'action': 'click-social-buttons',
@@ -2712,7 +2712,7 @@ let click = true;
   }
 
   let botao2 = document.querySelector('#page-top > footer > div > div > div:nth-child(2) > ul > li:nth-child(2) > a > i');
-  botao2.addEventListener('click'), () => {
+  botao2.addEventListener('click', () => {
 
     tracker.send('event', {
       'action': 'click-social-buttons',
@@ -2723,7 +2723,7 @@ let click = true;
   }
 
   let botao3 = document.querySelector('#page-top > footer > div > div > div:nth-child(2) > ul > li:nth-child(3) > a > i');
-  botao3.addEventListener('click'), () => {
+  botao3.addEventListener('click', () => {
 
     tracker.send('event', {
       'action': 'click-social-buttons',
