@@ -1066,14 +1066,18 @@ window.addEventListener(
 <script>
 
   //  envio do formulário de contato
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
-  const message = document.getElementById('message').value;
+  let name = document.getElementById('name').value;
+  let email = document.getElementById('email').value;
+  let phone = document.getElementById('phone').value;
+  let message = document.getElementById('message').value;
 
-  let contactForm = document.querySelector('#sentMessage');
+  let contactForm = document.querySelector('#contactForm');
+
+  console.log('content: ' + name + ' ' + email + ' ' + phone + ' ' + message);
 
   contactForm.addEventListener('submit', e => {
+
+    e.preventDefault();
 
     if (name === '' || email === '' || phone === '' || message === '') {
 
