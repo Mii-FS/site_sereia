@@ -1066,42 +1066,37 @@ window.addEventListener(
 <script>
 
   //  envio do formulário de contato
-      const name = document.getElementById('name');
-    const email = document.getElementById('email');
-    const phone = document.getElementById('phone');
-    const message = document.getElementById('message');
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+  const message = document.getElementById('message').value;
 
-    document.querySelector('form#contactForm').addEventListener(
-      'submit', evt => {
+  let contactForm = document.querySelector('#sentMessage');
 
-        if (name.value === '' && email.value === '' && phone.value === '' && message.value === '') {
-          window.tracker.send(
-            'event',
-            {
-              'action': 'submit',
-              'label': 'submit-form',
-              'category': 'envio-form',
-              'value': 'submit-fail'
-            }
-          );
-        }
-      
-        if (name.value !== '' && email.value !== '' && phone.value !== "" && message.value !== '') {
-          window.tracker.send(
-            'event',
-            {
-              'action': 'submit',
-              'label': 'submit-form',
-              'category': 'envio-form',
-              'value': 'submit-sucess'
-            }
-          );
-        }
-      }
-    )
+  contactForm.addEventListener('submit', e => {
+
+    if (name === '' || email === '' || phone === '' || message === '') {
+
+      window.tracker.send('e', {
+        'action': 'submit-form',
+        'label': 'envio',
+        'category': 'form',
+        'value': 'submit-fail'
+      });
+
+    } else {
+
+      window.tracker.send('e', {
+        'action': 'submit-form',
+        'label': 'envio',
+        'category': 'form',
+        'value': 'submit-sucess'
+      });
+    }
+
+  });
 
 </script>
-  
   
    
   
