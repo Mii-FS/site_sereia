@@ -1011,16 +1011,16 @@ window.addEventListener(
   
     <script>
       
-  let  Menu = 0;
-  let click = true;
+  let  quantidadeMenu = 0;
+  let clicado = true;
     
   document.querySelector('nav#mainNav.navbar.navbar-default.navbar-custom.navbar-fixed-top.affix div.container').addEventListener(
   'click', evt => {
     
     
-    if (click) {
+    if (clicado) {
 
-      Menu += 1;
+     quantidadeMenu += 1;
       tracker.send('event', 
                    
         {'action': 'click', 
@@ -1028,7 +1028,7 @@ window.addEventListener(
         'category': 'menu',
         'value': quantidade,
         'cd1': ''});
-     click = false;
+     clicado = false;
 
 
     } 
