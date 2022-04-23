@@ -2734,6 +2734,38 @@ let click = true;
   }
    
   </script>
+  
+  
+  <script>
+    // visualização do formulario 
+    
+  let quantidadeForm = 0;
+  let disparoFormContact = true;
+
+  document.addEventListener(
+    'scroll', evt => {
+      const scrollIni = (document.documentElement.scrollHeight - window.innerHeight) * 0.999;
+      const y = window.pageYOffset;
+      console.log(scrollIni, y);
+      if (disparoFormContact === true){
+        if (Math.ceil(y) > Math.ceil(scrollIni * 0.90 )) {
+          quantidadeForm++;
+          
+          tracker.send(
+            'event',
+            {
+              'action': 'view form', 
+              'label': 'Formulário de Contato',
+              'category': 'visualizar-form-contato',
+              'value': quantidadeForm,
+              'cd1': 'Source Code'
+            }
+          );
+          quantidadeForm++;
+          disparoFormContact = false;
+        }
+      }
+    }
 
 </body>
 
