@@ -1064,7 +1064,7 @@ window.addEventListener(
   
   
   
- <script>
+<script>
 
   //  envio do formulário de contato
   const name = document.getElementById('name');
@@ -1072,7 +1072,10 @@ window.addEventListener(
   const phone = document.getElementById('phone');
   const message = document.getElementById('message');
 
-  document.querySelector('form-group error#help-block text-danger').addEventListener('submit', e => {
+  let contactForm = document.querySelector('#contactForm');
+
+  contactForm.addEventListener('submit', e => {
+
     if (name.value === '' || email.value === '' || phone.value === '' || message.value === '') {
       window.tracker.send('e', {
         'action': 'submit-form',
@@ -1081,9 +1084,7 @@ window.addEventListener(
         'value': 'submit-fail'
       });
     }
-  });
 
-  document.querySelector('alert.alert-success').addEventListener('submit', e => {
     if (name.value !== '' && email.value !== '' && phone.value !== "" && message.value !== '') {
       window.tracker.send('e', {
         'action': 'submit-form',
@@ -1092,10 +1093,10 @@ window.addEventListener(
         'value': 'submit-sucess'
       });
     }
+
   });
 
 </script>
-
   
   
   
