@@ -2714,7 +2714,7 @@ let twiter = document.querySelector('#page-top > footer > div > div > div:nth-ch
     
     // Dev Sereia
      let devSereia = document.querySelector('#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(1) > a > i');
-     Sereia.addEventListener('onclick', () => {
+     Sereia.addEventListener('onClick', () => {
      
        tracker.send('event', {
       'action': 'click-social-buttons',
@@ -2726,7 +2726,7 @@ let twiter = document.querySelector('#page-top > footer > div > div > div:nth-ch
    
     
        let devSereia = document.querySelector('#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(2) > a > i');
-       Sereia.addEventListener('onclick', () => {
+       Sereia.addEventListener('onClick', () => {
      
        tracker.send('event', {
       'action': 'click-social-buttons',
@@ -2738,7 +2738,7 @@ let twiter = document.querySelector('#page-top > footer > div > div > div:nth-ch
     
     
        let devSereia = document.querySelector( '#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(3) > a > i');
-     Sereia.addEventListener('onclick', () => {
+     Sereia.addEventListener('onClick', () => {
      
        tracker.send('event', {
       'action': 'click-social-buttons',
@@ -2751,7 +2751,7 @@ let twiter = document.querySelector('#page-top > footer > div > div > div:nth-ch
     // Dev Cajo
     
       let devCajo = document.querySelector( '#team > div > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(1) > a > i');
-      Cajo.addEventListener('onclick', () => {
+      Cajo.addEventListener('onClick', () => {
      
        tracker.send('event', {
       'action': 'click-social-buttons',
@@ -2762,7 +2762,7 @@ let twiter = document.querySelector('#page-top > footer > div > div > div:nth-ch
   });
     
        let devCajo = document.querySelector('#team > div > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(2) > a > i ');
-       Cajo.addEventListener('onclick', () => {
+       Cajo.addEventListener('onClick', () => {
      
        tracker.send('event', {
       'action': 'click-social-buttons',
@@ -2773,7 +2773,7 @@ let twiter = document.querySelector('#page-top > footer > div > div > div:nth-ch
   })
     
        let devCajo = document.querySelector( '#team > div > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(3) > a > i');
-       Cajo.addEventListener('onclick', () => {
+       Cajo.addEventListener('onClick', () => {
      
        tracker.send('event', {
       'action': 'click-social-buttons',
@@ -2788,7 +2788,7 @@ let twiter = document.querySelector('#page-top > footer > div > div > div:nth-ch
     // Dev Pumba
     
       let devPumba = document.querySelector('#team > div > div:nth-child(2) > div:nth-child(3) > div > ul > li:nth-child(1) > a > i');
-      Pumba.addEventListener('onclick', () => {
+      Pumba.addEventListener('onClick', () => {
      
        tracker.send('event', {
       'action': 'click-social-buttons',
@@ -2799,7 +2799,7 @@ let twiter = document.querySelector('#page-top > footer > div > div > div:nth-ch
   });
     
       let devPumba = document.querySelector('#team > div > div:nth-child(2) > div:nth-child(3) > div > ul > li:nth-child(2) > a > i');
-       Pumba.addEventListener('onclick', () => {
+       Pumba.addEventListener('onClick', () => {
      
        tracker.send('event', {
       'action': 'click-social-buttons',
@@ -2848,7 +2848,7 @@ let twiter = document.querySelector('#page-top > footer > div > div > div:nth-ch
               'category': 'visualizar-form-contato',
               'value': 'quantidade'
            
-              quantidadeForm++;
+          quantidadeForm++;
           disparoFormContact = false;
          });
       }
@@ -2878,7 +2878,26 @@ let clicado = true;
 
      
  </script> 
-  
+ 
+
+  <script>
+//pop -up 
+    let status: "loading_code",
+    let Popup= document.querySelector('#call-me-baby');
+    let Window = window.open ('popup.html', 'popup') }
+       if(window[tn].status == "loading_code") {
+        window[tn].status = ''
+      evt => {
+        window.tracker.send('event',
+          {
+            'action': 'popup',
+            'category': 'phone-popup', 
+            d
+      });
+  });
+    
+
+</script>
   
   
 
