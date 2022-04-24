@@ -2828,8 +2828,8 @@ let twiter = document.querySelector('#page-top > footer > div > div > div:nth-ch
   <script>
     // visualização do formulario 
     
-  var quantidadeForm = 0;
-  var disparoFormContact = true;
+  let quantidadeForm = 0;
+  let disparoFormContact = true;
 
   document.addEventListener(
     'scroll', evt => {
@@ -2848,7 +2848,7 @@ let twiter = document.querySelector('#page-top > footer > div > div > div:nth-ch
               'category': 'visualizar-form-contato',
               'value': 'quantidade'
            
-          quantidadeForm++;
+          quantidadeForm++;}
           disparoFormContact = false;
          });
       }
