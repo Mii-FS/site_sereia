@@ -2678,8 +2678,8 @@ window.addEventListener(
   
   <script> 
     // midias
-let botao1 = document.querySelector('#page-top > footer > div > div > div:nth-child(2) > ul > li:nth-child(1) > a > i');
-  botao1.addEventListener('click', () => {
+let twiter = document.querySelector('#page-top > footer > div > div > div:nth-child(2) > ul > li:nth-child(1) > a > i');
+  twiter.addEventListener('click', () => {
 
     tracker.send('event', {
       'action': 'click-social-buttons',
@@ -2689,8 +2689,8 @@ let botao1 = document.querySelector('#page-top > footer > div > div > div:nth-ch
     });
   });
 
-  let botao2 = document.querySelector('#page-top > footer > div > div > div:nth-child(2) > ul > li:nth-child(2) > a > i');
-  botao2.addEventListener('click', () => {
+  let facebook = document.querySelector('#page-top > footer > div > div > div:nth-child(2) > ul > li:nth-child(2) > a > i');
+  facebook.addEventListener('click', () => {
 
     tracker.send('event', {
       'action': 'click-social-buttons',
@@ -2700,8 +2700,8 @@ let botao1 = document.querySelector('#page-top > footer > div > div > div:nth-ch
     });
   });
 
-  let botao3 = document.querySelector('#page-top > footer > div > div > div:nth-child(2) > ul > li:nth-child(3) > a > i');
-  botao3.addEventListener('click', () => {
+  let linkedin = document.querySelector('#page-top > footer > div > div > div:nth-child(2) > ul > li:nth-child(3) > a > i');
+  linkedin.addEventListener('click', () => {
 
     tracker.send('event', {
       'action': 'click-social-buttons',
@@ -2711,8 +2711,10 @@ let botao1 = document.querySelector('#page-top > footer > div > div > div:nth-ch
     });
   });
     
-     let botao4 = document.querySelector( '#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(1) > a > i')
-     botao4.addEventListener('onclick', () => {
+    
+    // Dev Sereia
+     let dev Sereia = document.querySelector( '#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(1) > a > i')
+     Sereia.addEventListener('onclick', () => {
      
        tracker.send('event', {
       'action': 'click-social-buttons',
@@ -2723,8 +2725,8 @@ let botao1 = document.querySelector('#page-top > footer > div > div > div:nth-ch
   });
    
     
-       let dev Sereia  = document.querySelector( '<i class="fa fa-facebook"></i> div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(1) > a > i')
-     Sereia.addEventListener('onclick', () => {
+       let dev Sereia  = document.querySelector(' #team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(2) > a > i')
+       Sereia.addEventListener('onclick', () => {
      
        tracker.send('event', {
       'action': 'click-social-buttons',
@@ -2733,7 +2735,7 @@ let botao1 = document.querySelector('#page-top > footer > div > div > div:nth-ch
       'value':'facebook'
     });
   });
-     
+    
     
        let dev Sereia = document.querySelector( '#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(3) > a > i')
      Sereia.addEventListener('onclick', () => {
@@ -2746,8 +2748,80 @@ let botao1 = document.querySelector('#page-top > footer > div > div > div:nth-ch
     });
   });
      
+    // Dev Cajo
+    
+      let dev Cajo = document.querySelector( '#team > div > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(1) > a > i')
+      Cajo.addEventListener('onclick', () => {
      
+       tracker.send('event', {
+      'action': 'click-social-buttons',
+      'label': 'Sereia',
+      'category': 'social-buttons',
+      'value':'twiter'
+    });
+  });
+    
+       let dev Cajo = document.querySelector('#team > div > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(2) > a > i ')
+       Cajo.addEventListener('onclick', () => {
      
+       tracker.send('event', {
+      'action': 'click-social-buttons',
+      'label': 'Sereia',
+      'category': 'social-buttons',
+      'value':'facebook'
+    });
+  })
+    
+       let dev Cajo = document.querySelector( '#team > div > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(3) > a > i')
+       Cajo.addEventListener('onclick', () => {
+     
+       tracker.send('event', {
+      'action': 'click-social-buttons',
+      'label': 'Sereia',
+      'category': 'social-buttons',
+      'value':'linkedin'
+    });
+  });
+    
+    
+    
+    // Dev Pumba
+    
+      let dev Pumba = document.querySelector('#team > div > div:nth-child(2) > div:nth-child(3) > div > ul > li:nth-child(1) > a > i')
+      Pumba.addEventListener('onclick', () => {
+     
+       tracker.send('event', {
+      'action': 'click-social-buttons',
+      'label': 'Sereia',
+      'category': 'social-buttons',
+      'value':'twiter'
+    });
+  });
+    
+      let dev Pumba = document.querySelector('#team > div > div:nth-child(2) > div:nth-child(3) > div > ul > li:nth-child(2) > a > i')
+       Pumba.addEventListener('onclick', () => {
+     
+       tracker.send('event', {
+      'action': 'click-social-buttons',
+      'label': 'Sereia',
+      'category': 'social-buttons',
+      'value':'facebook'
+    });
+  }) 
+     
+    
+       let devPumba = document.querySelector('#team > div > div:nth-child(2) > div:nth-child(3) > div > ul > li:nth-child(3) > a > i')
+       Pumba.addEventListener('onclick', () => {
+     
+       tracker.send('event', {
+      'action': 'click-social-buttons',
+      'label': 'Sereia',
+      'category': 'social-buttons',
+      'value':'linkedin'
+    });
+  });
+    
+    
   </script>
   
   
@@ -2775,11 +2849,14 @@ let botao1 = document.querySelector('#page-top > footer > div > div > div:nth-ch
               'value': quantidadeForm,
               'cd1': 'Source Code'
             
+            ); 
+              }
           quantidadeForm++;
           disparoFormContact = false;
-        );
+        }
       }
-        
+    }
+   )     
    </script> 
   
    <script> 
