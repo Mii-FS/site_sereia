@@ -2846,9 +2846,10 @@ let twiter = document.querySelector('#page-top > footer > div > div > div:nth-ch
               'action': 'view form', 
               'label': 'Formulário de Contato',
               'category': 'visualizar-form-contato',
-              'value': quantidadeForm
+              'value': 'quantidade'
            
-              }
+             });
+  });
           quantidadeForm++;
           disparoFormContact = false;
         }
@@ -2863,7 +2864,7 @@ let twiter = document.querySelector('#page-top > footer > div > div > div:nth-ch
 let quantidadeMenu = 0;
 let clicado = true;
      
-  document.querySelector('#mainNav#mainNav > div > div.navbar-header.page-scroll > button').addEventListener(
+  document.querySelector('#mainNav > div > div.navbar-header.page-scroll > button').addEventListener(
     'click', e => {
 
     quantidadeMenu += 1;
