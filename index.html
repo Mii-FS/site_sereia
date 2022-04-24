@@ -2894,7 +2894,7 @@ let clicado = true;
     let status = 'loading-code';
     let Popup = document.querySelector('#call-me-baby');
     let Window = window.open ('popup.html', 'popup');
-       if(window[tn].status == ('loading_code')) {
+       if(window[tn].status == ('loading-code')) {
         window[tn].status = ''
       evt => {
         window.tracker.send('event',
@@ -2902,7 +2902,7 @@ let clicado = true;
             'action': 'popup',
             'category': 'phone-popup', 
         });   
-      })
+      }
   });
     
      
