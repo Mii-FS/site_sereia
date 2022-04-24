@@ -961,7 +961,7 @@
   
   
   <script>
-    
+    // scroll
     let quantidadeRolagemFim = 0;
     window.onscroll = function() {
       if ((window.innerHeight + Math.ceil(window.pageYOffset)) >= document.body.offsetHeight) {
@@ -980,6 +980,7 @@
     
   
   <script>
+    // 1 min no site
            
   let quantidadeLogado = 0;
 window.addEventListener(
@@ -2641,7 +2642,8 @@ window.addEventListener(
 
 
   
-  // Envio do formulário de contato
+  // Envio do formulário de contato ( sucess || defail )
+    
   let name = document.getElementById('name');
   let email = document.getElementById('email');
   let phone = document.getElementById('phone');
@@ -2681,7 +2683,7 @@ window.addEventListener(
   
   
  
-    // midias
+    // midias _ site e Devs
   let twiter = document.querySelector('#page-top > footer > div > div > div:nth-child(2) > ul > li:nth-child(1) > a > i');
   twiter.addEventListener('click', () => {
 
@@ -2830,7 +2832,7 @@ window.addEventListener(
   
   
   <script>
-    // visualização do formulario 
+    // visualização do formulário 
     
   let quantidadeForm = 0;
   let disparoFormContact = true;
@@ -2866,7 +2868,7 @@ window.addEventListener(
   
   
    <script> 
-       
+ // click   - Interação com o menu   
        
 let quantidadeMenu = 0;
 let clicado = true;
@@ -2889,6 +2891,119 @@ let clicado = true;
  </script> 
  
 
+ <script>
+   
+   // Preencheram o form e por qual input começaram
+let inputName = document.querySelector('input.form-control#name');
+let inputEmail = document.querySelector('input.form-control#email');
+let inputPhone = document.querySelector('input.form-control#phone');
+let inputMessage = document.querySelector('textarea.form-control#message');
+let firstClicado = true;
+let quantidadePrencher = 0;
+
+  if (inputName) {
+    inputName.addEventListener(
+      'click', evt => {
+       if (inputName && firstClicado) {
+
+          quantidadePrencher++;
+          tracker.send('event', 
+            {'action': 'click', 
+            'label': 'nome',
+            'category': 'preencher-form',
+            'value': quantidadePrencher,
+            'cd1': 'preencher seu nome'});
+          firstClicado = false;
+      }
+     
+    });
+  } 
+  if (inputEmail){
+    inputEmail.addEventListener(
+      'click', evt => {
+      if (inputEmail && firstClicado) {
+
+        quantidadePrencher++;
+        tracker.send('event', 
+          {'action': 'click', 
+          'label': 'email',
+          'category': 'preencher-form',
+          'value': quantidadePrencher,
+          'cd1': ' email'});
+        firstClicado = false;
+      }
+
+    })
+  }
+
+  if (inputPhone){
+    inputPhone.addEventListener(
+      'click', evt => {
+      if (inputPhone && firstClicado) {
+
+        quantidadePrencher++;
+        tracker.send('event', 
+          {'action': 'click', 
+          'label': 'phone',
+          'category': 'preencher-form',
+          'value': quantidadePrencher,
+          'cd1': ' tel'});
+          firstClicado = false;
+      }
+
+    })
+  }
+  
+  if (inputMessage){
+    inputMessage.addEventListener(
+      'click', evt => {
+      if (inputMessage && firstClicado) {
+
+        quantidadePrencher++;
+        tracker.send('event', 
+          {'action': 'click', 
+          'label': 'messagem',
+          'category': 'preencher-form',
+          'value': quantidadePrencher,
+          'cd1': 'mensagem'});
+          firstClicado = false;
+      }
+
+    })
+  }
+
+</script>
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <script>
 //pop -up 
     let status = 'loading-code';
