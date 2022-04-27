@@ -2848,37 +2848,38 @@ window.addEventListener(
   
   
   <script>
-    // visualização do formulário 
-    
+
+  // visualização do formulário
+
   let quantidadeForm = 0;
   let disparoFormContact = true;
 
-  document.addEventListener(
-    'scroll', evt => {
-      const scrollIni = (document.documentElement.scrollHeight - window.innerHeight) * 0.999;
-      const y = window.pageYOffset;
-      console.log(scrollIni, y);
-      if (disparoFormContact === true){
+  document.addEventListener('scroll', evt => {
+
+    const scrollIni = (document.documentElement.scrollHeight - window.innerHeight) * 0.999;
+    const y = window.pageYOffset;
+
+    console.log(scrollIni, y);
+
+    if (disparoFormContact === true) {
+
       if (Math.ceil(y) > Math.ceil(scrollIni * 0.90 )) {
-          quantidadeForm++;
-          
-          tracker.send(
-            'event',
-            {
-              'action': 'view form', 
-              'label': 'Formulário de Contato',
-              'category': 'visualizar-form-contato',
-              'value': 'quantidade'
-           
-          quantidadeForm++ }; 
-    
-            
-          disparoFormContact = false;
-         });
+
+        quantidadeForm++;
+
+        tracker.send('event', {
+          'action': 'view form', 
+          'label': 'Formulário de Contato',
+          'category': 'visualizar-form-contato',
+          'value': quantidadeForm
+        }
       }
-    };
+
+      disparoFormContact = false;
+    }
+  });
       
-   </script> 
+</script>
   
   
   
@@ -2992,23 +2993,26 @@ let quantidadePrencher = 0;
  
   
   <script>
-//pop -up 
-    let status = 'loading-code';
-    let Popup = document.querySelector('#call-me-baby');
-    let Window = window.open ('popup.html', 'popup');
-       if(window[tn].status == ('loading-code') {
-        window[tn].status = ''
-      evt => {
-        window.tracker.send('event',
-          {
-            'action': 'popup',
-            'category': 'phone-popup', 
-        });   
-      }
-  }; 
+//pop-up 
+  
+  let status = 'loading-code';
+
+  if (window[tn].status === status) {
+
+    window[tn].status = '';
+
+    evt => {
+      window.tracker.send('event',
+      {
+        'action': 'popup',
+        'category': 'phone-popup'
+      });
+    }
+  }
+</script>
     
      
-</script>
+
   
   
 
