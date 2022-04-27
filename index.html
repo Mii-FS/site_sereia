@@ -2992,23 +2992,19 @@ let quantidadePrencher = 0;
 </script>
  
   
-  <script>
-//pop-up 
-  
-  let status = 'loading-code';
+ <script>
+   // popup 
 
-  if (window. alert('popup').status === status) {
+	let atendentePopup = document.querySelector('#call-me-baby');
 
-    window[].status = '';
+	atendentePopup.addEventListener('show', e => {
 
-    evt => {
-      window.tracker.send('event',
-      {
-        'action': 'popup',
-        'category': 'phone-popup'
-      });
-    }
-  }
+		tracker.send('event', {
+			'action': 'popup',
+        	'category': 'phone-popup'
+        });
+	}
+
 </script>
     
      
