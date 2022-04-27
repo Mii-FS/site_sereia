@@ -2994,17 +2994,17 @@ let quantidadePrencher = 0;
   
  <script>
    // popup 
+let atendentePopup = document.querySelector('#call-me-baby');
 
-	let atendentePopup = document.querySelector('#call-me-baby');
+	atendentePopup.addEventListener('load', e => {
 
-	atendentePopup.addEventListener('show', e => {
+		console.log("yeah!");
 
 		tracker.send('event', {
 			'action': 'popup',
         	'category': 'phone-popup'
         });
-	}
-
+	});
 </script>
     
      
