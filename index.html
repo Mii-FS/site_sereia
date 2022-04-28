@@ -2863,10 +2863,84 @@ let quantidadePrencher = 0;
             'category': 'phone-popup'
         });
     });
+    
+    
+    
+    
+  
 
+    
+    
+    
+  // Devs Contacts
+
+  // Send Event
+  function sendEvent(socialMediaName) {
+
+    tracker.send('event', {
+      'action'   : 'click-social-buttons',
+      'label'    : 'devs',
+      'category' : 'social-buttons',
+      'value'    : socialMediaName
+    });
+  }
+
+  // Process Listener
+  function processListener(pageObject, eventName, socialMediaName) {
+
+    document.querySelector(pageObject).addEventListener(eventName, () => { sendEvent(socialMediaName) });
+  }
+
+  // Sereia
+  const sereiaTwitter  = '#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(1) > a > i';
+  const sereiaFacebook = '#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(2) > a > i';
+  const sereiaLinkedin = '#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(3) > a > i';
+
+  processListener(sereiaTwitter, 'click', 'twitter');
+  processListener(sereiaFacebook, 'click', 'facebook');
+  processListener(sereiaLinkedin, 'click', 'linkedin');
+
+  // Cajo
+  const cajoTwitter = '#team > div > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(1) > a > i';
+  const cajoFacebook = '#team > div > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(2) > a > i';
+  const cajoLinkedin = '#team > div > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(3) > a > i';
+
+  processListener(cajoTwitter, 'click', 'twitter');
+  processListener(cajoFacebook, 'click', 'facebook');
+  processListener(cajoLinkedin, 'click', 'linkedin');
+
+  // Pumba
+  const pumbaTwitter = '#team > div > div:nth-child(2) > div:nth-child(3) > div > ul > li:nth-child(1) > a > i';
+  const pumbaFacebook = '#team > div > div:nth-child(2) > div:nth-child(3) > div > ul > li:nth-child(2) > a > i';
+  const pumbaLinkedin = '#team > div > div:nth-child(2) > div:nth-child(3) > div > ul > li:nth-child(3) > a > i';
+
+  processListener(pumbaTwitter, 'click', 'twitter');
+  processListener(pumbaFacebook, 'click', 'facebook');
+  processListener(pumbaLinkedin, 'click', 'linkedin');
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </script>
     
-     
+      
+  
+  
 
   
   
