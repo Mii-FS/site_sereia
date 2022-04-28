@@ -2909,49 +2909,51 @@ let quantidadePrencher = 0;
    
   // - Devs  - midias
 // Send Event
-function sendEvent(socialMediaName) {
+function sendEvent(developerName, socialMediaName) {
 
     tracker.send('event', {
         'action': 'click-social-buttons',
         'label': 'devs',
         'category': 'social-buttons',
-        'value': socialMediaName
+        'value': developerName.concat(' - ', socialMediaName)
     });
 }
 
 // Process Listener
-function processListener(pageObject, eventName, socialMediaName) {
+function processListener(pageObject, eventName, developerName, socialMediaName) {
 
-    document.querySelector(pageObject).addEventListener(eventName, () => { sendEvent(socialMediaName) });
+    document.querySelector(pageObject).addEventListener(eventName, () => { sendEvent(developerName, socialMediaName) });
 }
 
 // Sereia
 const sereiaTwitter = '#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(1) > a';
 const sereiaFacebook = '#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(2) > a';
 const sereiaLinkedin = '#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(3) > a';
+const sereiaFullname = '#team > div > div:nth-child(2) > div:nth-child(1) > div > h4';
 
-processListener(sereiaTwitter, 'click', 'twitter');
-processListener(sereiaFacebook, 'click', 'facebook');
-processListener(sereiaLinkedin, 'click', 'linkedin');
+processListener(sereiaTwitter, 'click', sereiaFullname, 'twitter');
+processListener(sereiaFacebook, 'click', sereiaFullname, 'facebook');
+processListener(sereiaLinkedin, 'click', sereiaFullname, 'linkedin');
 
 // Cajo
 const cajoTwitter = '#team > div > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(1) > a';
 const cajoFacebook = '#team > div > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(2) > a';
 const cajoLinkedin = '#team > div > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(3) > a';
+const cajoFullname = '#team > div > div:nth-child(2) > div:nth-child(2) > div > h4';
 
-processListener(cajoTwitter, 'click', 'twitter');
-processListener(cajoFacebook, 'click', 'facebook');
-processListener(cajoLinkedin, 'click', 'linkedin');
+processListener(cajoTwitter, 'click', cajoFullname, 'twitter');
+processListener(cajoFacebook, 'click', cajoFullname, 'facebook');
+processListener(cajoLinkedin, 'click', cajoFullname, 'linkedin');
 
 // Pumba
 const pumbaTwitter = '#team > div > div:nth-child(2) > div:nth-child(3) > div > ul > li:nth-child(1) > a';
 const pumbaFacebook = '#team > div > div:nth-child(2) > div:nth-child(3) > div > ul > li:nth-child(2) > a';
 const pumbaLinkedin = '#team > div > div:nth-child(2) > div:nth-child(3) > div > ul > li:nth-child(3) > a';
+const pumbaFullname = '#team > div > div:nth-child(2) > div:nth-child(3) > div > h4';
 
-processListener(pumbaTwitter, 'click', 'twitter');
-processListener(pumbaFacebook, 'click', 'facebook');
-processListener(pumbaLinkedin, 'click', 'linkedin');
-   
+processListener(pumbaTwitter, 'click', pumbaFullname, 'twitter');
+processListener(pumbaFacebook, 'click', pumbaFullname, 'facebook');
+processListener(pumbaLinkedin, 'click', pumbaFullname, 'linkedin');
    
   
     
