@@ -2907,114 +2907,50 @@ let quantidadePrencher = 0;
   });
    
    
-    // Dev Sereia
-     let devSereia1 = document.querySelector('#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(1) > a > i');
-     devSereia1.addEventListener ('click', () => {
-     
-       tracker.send('event', {
-      'action': 'click-social-buttons',
-      'label': 'Sereia',
-      'category': 'social-buttons',
-      'value':'twiter'
+  // - Devs  - midias
+// Send Event
+function sendEvent(socialMediaName) {
+
+    tracker.send('event', {
+        'action': 'click-social-buttons',
+        'label': 'devs',
+        'category': 'social-buttons',
+        'value': socialMediaName
     });
-  });
-   
-   
-       let devSereia2 = document.querySelector('#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(2) > a > i');
-       devSereia2.addEventListener('onClick', () => {
-     
-       tracker.send('event', {
-      'action': 'click-social-buttons',
-      'label': 'Sereia',
-      'category': 'social-buttons',
-      'value':'facebook'
-    });
-  });
-   
-   
-       let devSereia3 = document.querySelector( '#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(3) > a > i');
-     devSereia3.addEventListener('onClick', () => {
-     
-       tracker.send('event', {
-      'action': 'click-social-buttons',
-      'label': 'Sereia',
-      'category': 'social-buttons',
-      'value':'linkedin'
-    });
-  });
-     
-    // Dev Cajo
-   
-      let devCajo1 = document.querySelector( '#team > div > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(1) > a > i');
-      devCajo1.addEventListener('onClick', () => {
-     
-       tracker.send('event', {
-      'action': 'click-social-buttons',
-      'label': 'Sereia',
-      'category': 'social-buttons',
-      'value':'twiter'
-    });
-  });
-   
-       let devCajo2 = document.querySelector('#team > div > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(2) > a > i ');
-       devCajo2.addEventListener('onClick', () => {
-     
-       tracker.send('event', {
-      'action': 'click-social-buttons',
-      'label': 'Sereia',
-      'category': 'social-buttons',
-      'value':'facebook'
-    });
-  })
-   
-       let devCajo3 = document.querySelector( '#team > div > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(3) > a > i');
-       devCajo3.addEventListener('onClick', () => {
-     
-       tracker.send('event', {
-      'action': 'click-social-buttons',
-      'label': 'Sereia',
-      'category': 'social-buttons',
-      'value':'linkedin'
-    });
-  });
-   
-   
-   
-    // Dev Pumba
-   
-      let devPumba1 = document.querySelector('#team > div > div:nth-child(2) > div:nth-child(3) > div > ul > li:nth-child(1) > a > i');
-      devPumba1.addEventListener('onClick', () => {
-     
-       tracker.send('event', {
-      'action': 'click-social-buttons',
-      'label': 'Sereia',
-      'category': 'social-buttons',
-      'value':'twiter'
-    });
-  });
-   
-      let devPumba2 = document.querySelector('#team > div > div:nth-child(2) > div:nth-child(3) > div > ul > li:nth-child(2) > a > i');
-       devPumba2.addEventListener('onClick', () => {
-     
-       tracker.send('event', {
-      'action': 'click-social-buttons',
-      'label': 'Sereia',
-      'category': 'social-buttons',
-      'value':'facebook'
-    });
-  })
-     
-   
-       let devPumba3 = document.querySelector('#team > div > div:nth-child(2) > div:nth-child(3) > div > ul > li:nth-child(3) > a > i');
-       devPumba3.addEventListener('onclick', () => {
-     
-       tracker.send('event', {
-      'action': 'click-social-buttons',
-      'label': 'Sereia',
-      'category': 'social-buttons',
-      'value':'linkedin'
-    });
-  });
+}
+
+// Process Listener
+function processListener(pageObject, eventName, socialMediaName) {
+
+    document.querySelector(pageObject).addEventListener(eventName, () => { sendEvent(socialMediaName) });
+}
+
+// Sereia
+const sereiaTwitter = '#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(1) > a';
+const sereiaFacebook = '#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(2) > a';
+const sereiaLinkedin = '#team > div > div:nth-child(2) > div:nth-child(1) > div > ul > li:nth-child(3) > a';
+
+processListener(sereiaTwitter, 'click', 'twitter');
+processListener(sereiaFacebook, 'click', 'facebook');
+processListener(sereiaLinkedin, 'click', 'linkedin');
+
+// Cajo
+const cajoTwitter = '#team > div > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(1) > a';
+const cajoFacebook = '#team > div > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(2) > a';
+const cajoLinkedin = '#team > div > div:nth-child(2) > div:nth-child(2) > div > ul > li:nth-child(3) > a';
+
+processListener(cajoTwitter, 'click', 'twitter');
+processListener(cajoFacebook, 'click', 'facebook');
+processListener(cajoLinkedin, 'click', 'linkedin');
+
+// Pumba
+const pumbaTwitter = '#team > div > div:nth-child(2) > div:nth-child(3) > div > ul > li:nth-child(1) > a';
+const pumbaFacebook = '#team > div > div:nth-child(2) > div:nth-child(3) > div > ul > li:nth-child(2) > a';
+const pumbaLinkedin = '#team > div > div:nth-child(2) > div:nth-child(3) > div > ul > li:nth-child(3) > a';
+
+processListener(pumbaTwitter, 'click', 'twitter');
+processListener(pumbaFacebook, 'click', 'facebook');
+processListener(pumbaLinkedin, 'click', 'linkedin');
    
    
   
