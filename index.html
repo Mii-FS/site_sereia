@@ -2915,14 +2915,16 @@ function sendEvent(developerName, socialMediaName) {
         'action': 'click-social-buttons',
         'label': 'devs',
         'category': 'social-buttons',
-        'value': developerName.innerHTML.concat(' - ', socialMediaName)
+        'value': developerName.concat(' - ', socialMediaName)
     });
 }
 
 // Process Listener
 function processListener(pageObject, eventName, developerName, socialMediaName) {
 
-    document.querySelector(pageObject).addEventListener(eventName, () => { sendEvent(developerName, socialMediaName) });
+    const devName = document.querySelector(developerName).textContent;
+
+    document.querySelector(pageObject).addEventListener(eventName, () => { sendEvent(devName, socialMediaName) });
 }
 
 // Sereia
@@ -2954,8 +2956,6 @@ const pumbaFullname = '#team > div > div:nth-child(2) > div:nth-child(3) > div >
 processListener(pumbaTwitter, 'click', pumbaFullname, 'twitter');
 processListener(pumbaFacebook, 'click', pumbaFullname, 'facebook');
 processListener(pumbaLinkedin, 'click', pumbaFullname, 'linkedin');
-   
-  
     
 </script>
     
